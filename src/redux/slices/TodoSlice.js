@@ -17,15 +17,13 @@ export const TodoSlice=createSlice({
             state.todoList=action.payload
         },
         addTodos:(state,action)=>{
-            console.log(action.payload)
             const data=action.payload
-            console.log(data)
 
-            //assign empty array
+            //assign empty array if state is null
             if(state.todoList==null){
                 state.todoList=[]
             }
-            
+
             state.todoList.push({
                 task:data,
                 priority:"",

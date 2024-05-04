@@ -21,7 +21,6 @@ const AddTodo = () => {
     if(todo==""){
       toast.error("No Todo data to add")
     }else{
-      console.log(todo)
       dispatch(addTodos(todo))
     }
     setTodo("")
