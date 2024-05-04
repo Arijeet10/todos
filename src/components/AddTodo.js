@@ -4,7 +4,7 @@ import { IoIosAdd } from "react-icons/io";
 import { useDispatch } from "react-redux";
 import toast from "react-hot-toast";
 import { addTodos } from "@/redux/slices/TodoSlice";
-import { useRef, useState } from "react";
+import { useState } from "react";
 // import { IoIosClose } from "react-icons/io";
 
 
@@ -21,6 +21,7 @@ const AddTodo = () => {
     if(todo==""){
       toast.error("No Todo data to add")
     }else{
+      console.log(todo)
       dispatch(addTodos(todo))
       setTodo("")
     }

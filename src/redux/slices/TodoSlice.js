@@ -17,7 +17,9 @@ export const TodoSlice=createSlice({
             state.todoList=action.payload
         },
         addTodos:(state,action)=>{
+            console.log(action.payload)
             const data=action.payload
+            console.log(data)
             state.todoList.push({
                 task:data,
                 priority:"",
