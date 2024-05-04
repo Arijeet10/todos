@@ -23,8 +23,8 @@ const AddTodo = () => {
     }else{
       console.log(todo)
       dispatch(addTodos(todo))
-      setTodo("")
     }
+    setTodo("")
   }
 
   return (
