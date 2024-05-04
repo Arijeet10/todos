@@ -20,6 +20,12 @@ export const TodoSlice=createSlice({
             console.log(action.payload)
             const data=action.payload
             console.log(data)
+
+            //assign empty array
+            if(state.todoList==null){
+                state.todoList=[]
+            }
+            
             state.todoList.push({
                 task:data,
                 priority:"",
