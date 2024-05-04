@@ -157,7 +157,7 @@ const ViewTodo = () => {
                     )}
                   </div>
                   <div className=" col-span-4  sm:col-span-6 lg:col-span-7 overflow-hidden text-ellipsis text-start flex items-center justify-start gap-1">
-                    <div>{todo.task}</div>
+                    <div className="text-slate-600">{todo.task}</div>
                     <div
                       onMouseEnter={() => handleWeatherInfo(todo.task)}
                       onMouseLeave={() => setModal(false)}
@@ -197,7 +197,7 @@ const ViewTodo = () => {
                   {/* Set Priority */}
                   <div className="relative w-full col-span-4 sm:col-span-2 lg:col-span-2 text-sm sm:text-base  text-nowrap flex items-center justify-center sm:justify-between font-medium">
                     {todo.priority ? (
-                      <div>{todo.priority}</div>
+                      <div className={`px-2 py-1 rounded-md  ${todo.priority=="Low" && "bg-yellow-500 text-white"} ${todo.priority=="Medium" && "bg-green-400 text-white"} ${todo.priority=="High" && "bg-red-500 text-white"}`}>{todo.priority}</div>
                     ) : (
                       <div>Set Priority</div>
                     )}
